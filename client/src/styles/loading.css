@@ -1,0 +1,92 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;   
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.loading-wrapper {
+    background-color: #f0f8ff;
+    height: 100vh;
+    width:100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-family: sans-serif;
+}
+  
+.loading-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px 40px;
+}
+  
+.pva-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 15vw; 
+    max-width: 200px; 
+    min-width: 100px; 
+}
+  
+  
+.center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+  
+.loading-box {
+    background-color: white;
+    padding: 60px 80px;
+    border-radius: 15px;
+    box-shadow: none;
+    text-align: center;
+    width: 480px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+  
+  
+.loading-text {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+  
+  
+.progress-bar-background {
+    background-color: #dcdcdc;
+    height: 20px;
+    border-radius: 5px;
+    width: 350px;
+    margin: 0 auto 20px;
+}
+  
+.progress-bar-fill {
+    background-color: #094c9f;
+    height: 100%;
+    border-radius: 5px;
+    transition: width 0.4s ease;
+}
+  
+.footer-bar {
+    background-color: #e5e3d5;
+    width: 100%;
+    padding: 10px;
+    padding-right: 30px;
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    border-top: 1px solid #ccc;
+}
+  

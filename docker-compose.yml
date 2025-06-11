@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  frontend:
+    image: miguelrl17/pva-uci-data-extraction-frontend:latest
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    restart: unless-stopped
+  backend:
+    image: miguelrl17/pva-uci-data-extraction-backend:latest
+    ports:
+      - "5000:5000"
+    environment:
+      - TESSDATA_PREFIX=/usr/share/tesseract-ocr/4.00/tessdata
+      - UNSTRUCTURED_HOME=/app/.unstructured_cache
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    env_file:
+      - .env  # This will load your .env file from the root directory
+    volumes:
+      - ./server/src:/app/src
+      - unstructured_cache:/app/.unstructured_cache # Persistent cache
+      - ./server/uploads:/app/uploads # For file uploads
+      - ./server/temp:/app/temp # For temp files
+volumes:
+  unstructured_cache:

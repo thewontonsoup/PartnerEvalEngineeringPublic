@@ -1,0 +1,223 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #fdfdfd;
+    overflow-y: auto;
+}
+
+/* Main Wrapper */
+.final-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/* Sticky Header */
+.final-header {
+    width: 100%;
+    padding: 20px 40px;
+    position: sticky;
+    top: 0;
+    background-color: #fdfdfd;
+    z-index: 100;
+    border-bottom: 1px solid #ddd;
+}
+
+/* PVA Logo */
+.pva-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 15vw;
+    max-width: 200px;
+    min-width: 100px;
+}
+
+/* Main Content */
+.final-content {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Toggle Button Container */
+.toggle-container {
+    margin-bottom: 10px;
+}
+
+/* File Table */
+.file-table {
+    margin: 20px 0;
+    width: 100%;
+    max-width: 700px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+
+/* Table Header and Rows */
+.table-header,
+.table-row {
+    display: grid;
+    grid-template-columns: 1fr 100px 100px;
+    align-items: center;
+    padding: 14px 20px;
+    text-align: center;
+}
+
+.table-header {
+    background-color: #e8e2cc;
+    font-weight: bold;
+}
+
+.table-row:nth-child(even) {
+    background-color: #f5faff;
+}
+
+.table-row:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.file-name {
+    text-align: left;
+    font-weight: 500;
+}
+
+.icon-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    cursor: pointer;
+    color: #444;
+}
+
+/* Download All Button */
+.download-all-btn {
+    background-color: #dddddd;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Footer Bar */
+.footer-bar {
+    background-color: #e5e3d5;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    font-size: 12px;
+    color: #666;
+    border-top: 1px solid #ccc;
+}
+
+/* JSON Table and Editor */
+.json-table-wrapper {
+    margin-top: 10px;
+    max-height: 75vh;
+    overflow-y: auto;
+    background-color: #fffef7;
+    border-top: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+.slightly-specific-json-table-wrapper {
+    margin-top: 10px;
+    max-height: 75vh;
+    overflow-y: auto;
+    background-color: #fffef7;
+    border-top: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Buttons container */
+.json-table-buttons {
+  padding: 10px 20px;
+  background-color: #fffef7;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 10px;
+}
+
+
+/* Bottom buttons container */
+.json-table-buttons.bottom {
+  border-bottom: none;
+  border-top: 1px solid #ccc;
+  justify-content: flex-end;
+}
+
+
+.json-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.json-table th,
+.json-table td {
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    text-align: left;
+}
+
+/* Container for the entire table component */
+.json-table-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 10px;
+  background-color: #fffef7;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.json-key {
+    background-color: #f9f9f9;
+    font-weight: bold;
+    width: 40%;
+}
+
+.json-value input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+/* Toggle Button */
+.toggle-btn {
+    background-color: #ddd;
+    border: none;
+    padding: 6px 12px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* Save Button */
+.save-edit-btn {
+    background-color: #444;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
